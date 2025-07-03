@@ -2,19 +2,45 @@
 
  int main (){
 
-    int a = 2;
+    // int a = 2;
 
-    switch (a)
-    {
-    case 0:
-        printf("in 0");
-        break;
-    case 2 :
-    printf("in 2");
-    break;
+    // switch (a)
+    // {
+    // case 0:
+    //     printf("in 0");
+    //     break;
+    // case 2 :
+    // printf("in 2");
+    // break;
     
-    default:
-        break;
-    }
+    // default:
+    //     break;
+    // }
 
+    int c , i , nwhite , nother , ndigit[10];
+    nwhite = nother = 0 ;
+    for ( int i=0 ;  i< 10 ; i++){
+        ndigit[i]=0;
+    }
+    while ((c=getchar()) != EOF){
+        switch (c)
+        {
+        case '0': case '1': case '2': case '3': case '4':
+        case '5': case '6': case '7': case '8': case '9':
+            ndigit[c-'0']++;
+            break;
+        case ' ' : case '\n': case '\t':
+            nwhite++;
+            break;
+        default:
+            nother++;
+            break;
+        }
+    }
+    printf("digits = ");
+    for ( i =0 ; i< 10 ; i++){
+        printf("%d",ndigit[i]);
+    }
+    printf(", white space = %d, other = %d  ", nwhite , nother );
+    return 0;
  }
