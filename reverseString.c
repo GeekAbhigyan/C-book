@@ -1,14 +1,18 @@
 #include<stdio.h>
+#include<string.h>
 
 void reverseString(char str[], int n);
 
 
 int main() {
     char str[100];
-    int n;
+    int n=0;
     printf("Enter a string: ");
-    scanf("%s", str);
-    n = strlen(str);
+    char c;
+    int n;
+    while((c=getchar() != EOF)){
+            n++;
+    }
     reverseString(str, n);
     printf("Reversed string: %s\n", str);
     return 0;
