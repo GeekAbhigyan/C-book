@@ -12,7 +12,7 @@ int main(){
     int *p = a;
     pr(p);
     
-    printf("/n");
+    printf("\n");
 
     pr(p+2);
 
